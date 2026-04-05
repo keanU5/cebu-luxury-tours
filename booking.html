@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Your Experience | Cebu Luxury Tours</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { navy: '#0A2342', gold: '#C9A84C', pearl: '#F8F5F0', nearblack: '#1A1A1A' },
+                    fontFamily: { playfair: ['Playfair Display', 'serif'], inter: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pearl font-inter text-nearblack">
+
+    <!-- Navigation -->
+    <nav class="bg-navy py-4 px-6 md:px-12 flex justify-between items-center shadow-2xl">
+        <a href="index.html" class="font-playfair text-xl font-bold text-gold tracking-widest uppercase">Cebu Luxury Tours</a>
+        <ul class="hidden md:flex space-x-8 text-[10px] font-semibold uppercase tracking-widest text-pearl">
+            <li><a href="index.html" class="hover:text-gold transition">Home</a></li>
+            <li><a href="index.html#tours" class="hover:text-gold transition">Experiences</a></li>
+            <li><a href="contact.html" class="hover:text-gold transition">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Booking Header -->
+    <section class="py-16 bg-navy text-center text-pearl">
+        <h1 class="font-playfair text-4xl md:text-5xl italic">Reserve Your Journey</h1>
+        <p class="text-gold text-[10px] uppercase tracking-[0.4em] mt-4">Secure your exclusive island experience</p>
+    </section>
+
+    <!-- Booking Form Container -->
+    <section class="py-16 px-6 max-w-4xl mx-auto">
+        <div class="bg-white shadow-2xl border-t-8 border-gold p-8 md:p-12">
+            
+            <form id="booking-form" class="space-y-8">
+                <!-- 1. Tour Selection -->
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest font-bold text-navy mb-3">Select Your Experience</label>
+                    <select id="tour-choice" required class="w-full border-b border-gray-300 py-3 focus:outline-none focus:border-gold bg-transparent font-playfair text-lg italic">
+                        <option value="" disabled selected>Choose a Signature Journey...</option>
+                        <option value="whale-shark">The Majestic Blue: Whale Shark Escape (₱18,500+)</option>
+                        <option value="yacht-charter">Azure Horizons: Signature Yacht Charter (₱55,000+)</option>
+                        <option value="vip-canyoning">The Verdant Crown: VIP Canyoning (₱24,000+)</option>
+                    </select>
+                </div>
+
+                <!-- 2. Personal Details -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest font-bold text-navy mb-2">Guest Name</label>
+                        <input type="text" id="guest-name" placeholder="Lead Traveler Name" required class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest font-bold text-navy mb-2">Email Address</label>
+                        <input type="email" id="guest-email" placeholder="For your confirmation" required class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold transition-colors">
+                    </div>
+                </div>
+
+                <!-- 3. Logistics -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest font-bold text-navy mb-2">Preferred Date</label>
+                        <input type="date" id="booking-date" required class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold transition-colors bg-white">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest font-bold text-navy mb-2">Number of Guests</label>
+                        <input type="number" id="guest-count" min="1" max="10" value="1" required class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold transition-colors">
+                    </div>
+                </div>
+
+                <!-- 4. Payment Method (Based on Section 7.3) -->
+                <div class="pt-6">
+                    <label class="block text-[10px] uppercase tracking-widest font-bold text-navy mb-4">Payment Method</label>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <label class="relative flex items-center p-4 border border-gray-200 cursor-pointer hover:bg-pearl transition group">
+                            <input type="radio" name="payment-method" value="local" required class="mr-4 accent-navy">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-wider text-navy">Philippine Local</p>
+                                <p class="text-[10px] text-gray-500">GCash, Maya, or PH Credit Cards</p>
+                            </div>
+                        </label>
+                        <label class="relative flex items-center p-4 border border-gray-200 cursor-pointer hover:bg-pearl transition group">
+                            <input type="radio" name="payment-method" value="international" class="mr-4 accent-navy">
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-wider text-navy">International</p>
+                                <p class="text-[10px] text-gray-500">PayPal, International Cards (USD/EUR)</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-10 text-center">
+                    <button type="submit" class="w-full bg-navy text-gold py-5 text-xs font-bold uppercase tracking-[0.3em] hover:bg-gold hover:text-navy transition-all duration-500 shadow-xl">
+                        Initiate Reservation
+                    </button>
+                    <p class="mt-4 text-[10px] text-gray-400 italic">No charges will be made until the final step.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-nearblack text-pearl/30 py-8 text-center text-[10px] uppercase tracking-widest">
+        <p>&copy; 2026 Cebu Luxury Tours | Secure Reservation Portal</p>
+    </footer>
+
+</body>
+</html>

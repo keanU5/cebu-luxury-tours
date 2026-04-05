@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cebu Luxury Tours | Bespoke Island Experiences</title>
+    
+    <!-- SEO & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A2342',
+                        gold: '#C9A84C',
+                        pearl: '#F8F5F0',
+                        nearblack: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        playfair: ['Playfair Display', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(10, 35, 66, 0.7), rgba(10, 35, 66, 0.3));
+        }
+    </style>
+</head>
+<body class="bg-pearl font-inter text-nearblack overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-navy/90 backdrop-blur-md py-4 px-6 md:px-12 flex justify-between items-center shadow-2xl">
+        <div class="flex flex-col">
+            <span class="font-playfair text-xl md:text-2xl font-bold text-gold tracking-[0.2em] uppercase">Cebu Luxury Tours</span>
+            <span class="text-[10px] text-pearl/60 tracking-[0.3em] uppercase ml-1">Elite Travel & Concierge</span>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-10 text-[11px] font-semibold uppercase tracking-[0.2em] text-pearl">
+            <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-gold transition-colors">Philosophy</a></li>
+            <li><a href="#tours" class="hover:text-gold transition-colors">Experiences</a></li>
+            <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
+        </ul>
+
+        <a href="booking.html" class="bg-gold hover:bg-white text-navy px-6 py-2 text-[11px] font-bold uppercase tracking-widest transition-all duration-500 shadow-lg">
+            Reserve Now
+        </a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header id="home" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1920" 
+             class="absolute inset-0 w-full h-full object-cover" alt="Luxury Cebu Resort">
+        <div class="absolute inset-0 hero-gradient"></div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl">
+            <p class="text-gold uppercase tracking-[0.5em] text-xs md:text-sm mb-6 animate-pulse">Exclusivity Redefined</p>
+            <h1 class="font-playfair text-5xl md:text-8xl text-white mb-8 leading-tight italic">
+                Where Island Paradise <br> Meets <span class="text-gold">Perfection</span>
+            </h1>
+            <p class="text-pearl/80 text-sm md:text-lg max-w-2xl mx-auto mb-10 font-light tracking-wide leading-relaxed">
+                Bespoke private journeys through the hidden lagoons and crystal peaks of the Philippine archipelago. Curated for the discerning traveler.
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="#tours" class="border border-gold text-gold px-12 py-4 text-xs font-bold uppercase tracking-[0.3em] hover:bg-gold hover:text-navy transition-all duration-500 w-64">
+                    Explore Experiences
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <!-- PHILOSOPHY SECTION -->
+    <section id="about" class="py-24 px-6 md:px-12 bg-pearl">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&q=80&w=800" class="w-full h-[500px] object-cover shadow-2xl" alt="Private Island">
+                <div class="absolute -bottom-6 -right-6 bg-navy p-8 hidden md:block">
+                    <p class="text-gold font-playfair text-3xl italic">100%</p>
+                    <p class="text-pearl text-[10px] uppercase tracking-widest">Private & Secure</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="font-playfair text-4xl md:text-5xl text-navy mb-8 leading-tight">The Art of <br><span class="italic text-gold">Seamless Travel</span></h2>
+                <p class="text-nearblack/70 leading-relaxed mb-6">
+                    At Cebu Luxury Tours, we believe travel should be more than a destination—it should be a masterpiece. We eliminate the crowds and the noise, replacing them with private yachts, premium transport, and expert guides who anticipate your every need.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center text-xs uppercase tracking-widest text-navy font-bold">
+                        <span class="w-8 h-[1px] bg-gold mr-4"></span> VIP Airport Fast-Track
+                    </li>
+                    <li class="flex items-center text-xs uppercase tracking-widest text-navy font-bold">
+                        <span class="w-8 h-[1px] bg-gold mr-4"></span> Private Helicopter Charters
+                    </li>
+                    <li class="flex items-center text-xs uppercase tracking-widest text-navy font-bold">
+                        <span class="w-8 h-[1px] bg-gold mr-4"></span> Gourmet Island Dining
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+  <!-- EXPERIENCES GRID (CEBU SPECIFIC) -->
+    <section id="tours" class="py-24 bg-navy text-pearl px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <p class="text-gold uppercase tracking-[0.4em] text-[10px] mb-4 text-center md:text-left">The Cebu Collection</p>
+                    <h2 class="font-playfair text-4xl md:text-6xl italic">Signature Journeys</h2>
+                </div>
+                <p class="text-pearl/50 text-sm max-w-xs text-center md:text-right italic">Bespoke itineraries through the heart of the Visayas.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tour 1: Oslob Whale Sharks -->
+                <div class="group relative overflow-hidden bg-nearblack h-[600px]">
+                    <img src="https://images.unsplash.com/photo-1560086824-34537604313b?auto=format&fit=crop&q=80&w=800" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Oslob Whale Sharks">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 p-8 w-full">
+                        <p class="text-gold text-[10px] uppercase tracking-[0.3em] mb-2">South Cebu</p>
+                        <h3 class="font-playfair text-3xl mb-4 leading-tight">Celestial Oslob: <br>Whale Shark & Sumilon Escape</h3>
+                        <p class="text-pearl/60 text-xs mb-6 font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            A sunrise encounter with the gentle giants of the Visayan Sea, followed by a private champagne breakfast on the pristine white sands of Sumilon Island.
+                        </p>
+                        <p class="font-playfair text-xl text-gold mb-4">From ₱18,500</p>
+                        <a href="booking.html" class="inline-block text-[10px] uppercase tracking-widest font-bold border-b border-gold pb-1 hover:text-white transition-colors">Reserve Your Date</a>
+                    </div>
+                </div>
+
+                <!-- Tour 2: Mactan Yacht Charter -->
+                <div class="group relative overflow-hidden bg-nearblack h-[600px]">
+                    <img src="https://images.unsplash.com/photo-1623912185233-a3d132644265?auto=format&fit=crop&q=80&w=800" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Cebu Island Hopping">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 p-8 w-full">
+                        <p class="text-gold text-[10px] uppercase tracking-[0.3em] mb-2">Mactan Archipielago</p>
+                        <h3 class="font-playfair text-3xl mb-4 leading-tight">Azure Horizons: <br>Private Mactan Yacht Charter</h3>
+                        <p class="text-pearl/60 text-xs mb-6 font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            Sail the Hilutungan Channel on a bespoke catamaran. Experience sunset over the Mactan skyline with live acoustic music and a gourmet seafood spread.
+                        </p>
+                        <p class="font-playfair text-xl text-gold mb-4">From ₱55,000</p>
+                        <a href="booking.html" class="inline-block text-[10px] uppercase tracking-widest font-bold border-b border-gold pb-1 hover:text-white transition-colors">Check Availability</a>
+                    </div>
+                </div>
+
+                <!-- Tour 3: Kawasan Falls / Badian -->
+                <div class="group relative overflow-hidden bg-nearblack h-[600px]">
+                    <img src="https://images.unsplash.com/photo-1590559899731-a38283cad3bd?auto=format&fit=crop&q=80&w=800" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" alt="Kawasan Falls Cebu">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
+                    <div class="absolute bottom-0 p-8 w-full">
+                        <p class="text-gold text-[10px] uppercase tracking-[0.3em] mb-2">Badian Highlands</p>
+                        <h3 class="font-playfair text-3xl mb-4 leading-tight">Emerald Descent: <br>Elite Kawasan Canyoning</h3>
+                        <p class="text-pearl/60 text-xs mb-6 font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            The ultimate adrenaline-luxury fusion. Explore the turquoise canyons of Badian with dedicated private guides and an exclusive forest-to-table lunch experience.
+                        </p>
+                        <p class="font-playfair text-xl text-gold mb-4">From ₱24,000</p>
+                        <a href="booking.html" class="inline-block text-[10px] uppercase tracking-widest font-bold border-b border-gold pb-1 hover:text-white transition-colors">Inquire for Private Entry</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-nearblack text-pearl py-20 px-6 md:px-12 border-t border-pearl/10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+            <div class="md:col-span-2">
+                <p class="font-playfair text-2xl text-gold mb-6 uppercase tracking-widest">Cebu Luxury Tours</p>
+                <p class="text-pearl/50 text-sm max-w-sm mb-8 leading-relaxed">
+                    Owned and operated by Cebu Travels LLC. Registered under ZenBusiness. Providing the gold standard of Philippine hospitality since 2026.
+                </p>
+                <div class="flex space-x-6 text-gold italic text-sm">
+                    <span>Instagram</span>
+                    <span>LinkedIn</span>
+                    <span>Privé Concierge</span>
+                </div>
+            </div>
+            <div>
+                <p class="text-[10px] uppercase tracking-[0.4em] text-gold mb-6">Quick Links</p>
+                <ul class="space-y-4 text-sm text-pearl/70">
+                    <li><a href="#" class="hover:text-gold transition-colors">The Collection</a></li>
+                    <li><a href="#" class="hover:text-gold transition-colors">Safety Protocols</a></li>
+                    <li><a href="#" class="hover:text-gold transition-colors">Partner With Us</a></li>
+                    <li><a href="#" class="hover:text-gold transition-colors">Sustainability</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="text-[10px] uppercase tracking-[0.4em] text-gold mb-6">Inquiries</p>
+                <p class="text-sm text-pearl/70 mb-2">info@cebuluxurytours.com</p>
+                <p class="text-sm text-pearl/70">Cebu City, Philippines</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-pearl/5 flex flex-col md:flex-row justify-between text-[10px] uppercase tracking-[0.2em] text-pearl/30">
+            <p>&copy; 2026 Cebu Luxury Tours. All Rights Reserved.</p>
+            <p>Built by Rey (Web Specialist)</p>
+        </div>
+    </footer>
+
+    <!-- STICKY NAVBAR SCRIPT -->
+    <script>
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 100) {
+                nav.classList.add('bg-navy', 'py-2');
+                nav.classList.remove('bg-navy/90', 'py-4');
+            } else {
+                nav.classList.add('bg-navy/90', 'py-4');
+                nav.classList.remove('bg-navy', 'py-2');
+            }
+        };
+    </script>
+</body>
+</html>
